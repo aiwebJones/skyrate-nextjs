@@ -1,0 +1,13 @@
+{
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_API_URL": "@next-public-api-url"
+    }
+  },
+  "regions": ["hnd1", "icn1", "sin1"],
+  "functions": {
+    "pages/api/**": {
+      "maxDuration": 30
+    }
+  }
+} 
