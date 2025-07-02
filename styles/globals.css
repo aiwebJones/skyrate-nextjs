@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-system-blue { color: #007AFF; }
+  .bg-system-blue { background-color: #007AFF; }
+  .text-apple-gray { color: #1C1C1E; }
+  .bg-apple-gray { background-color: #F2F2F7; }
+  .text-apple-green { color: #34C759; }
+  .bg-apple-green { background-color: #34C759; }
+  .text-apple-red { color: #FF3B30; }
+  .bg-apple-red { background-color: #FF3B30; }
+  .text-apple-light-gray { color: #8E8E93; }
+  .bg-apple-light-gray { background-color: #C7C7CC; }
+}
+
+/* System font stack for performance */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Toast notification styles */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.toast.show {
+  transform: translateX(0);
+} 
