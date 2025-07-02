@@ -127,7 +127,7 @@ export default function Home() {
         <header className="bg-white shadow-sm sticky top-0 z-40">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
-              <h1 className="text-2xl font-bold text-blue-600">SkyRate</h1>
+            <h1 className="text-2xl font-bold text-blue-600">SkyRate</h1>
               <nav className="hidden md:flex space-x-6">
                 <a href="#quote" className="text-gray-600 hover:text-blue-600">Get Quote</a>
                 <a href="#services" className="text-gray-600 hover:text-blue-600">Services</a>
@@ -169,67 +169,67 @@ export default function Home() {
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold mb-4">Get Your Air Freight Quote</h3>
               <p className="text-xl text-gray-600">Enter your shipment details for an instant quote</p>
-            </div>
+          </div>
 
             <div className="bg-white rounded-xl shadow-xl p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Route Selection */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+              <div>
                     <label className="block text-sm font-medium mb-2">Origin Airport (IATA Code)</label>
-                    <input 
-                      type="text" 
-                      name="origin" 
+                <input 
+                  type="text" 
+                  name="origin" 
                       placeholder="e.g., PVG (Shanghai)" 
-                      value={formData.origin}
-                      onChange={handleInputChange}
+                  value={formData.origin}
+                  onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
-                      required 
-                      maxLength="3" 
-                    />
-                  </div>
-                  
-                  <div>
+                  required 
+                  maxLength="3" 
+                />
+              </div>
+              
+              <div>
                     <label className="block text-sm font-medium mb-2">Destination Airport (IATA Code)</label>
-                    <input 
-                      type="text" 
-                      name="destination" 
+                <input 
+                  type="text" 
+                  name="destination" 
                       placeholder="e.g., LAX (Los Angeles)" 
-                      value={formData.destination}
-                      onChange={handleInputChange}
+                  value={formData.destination}
+                  onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
-                      required 
-                      maxLength="3" 
-                    />
+                  required 
+                  maxLength="3" 
+                />
                   </div>
-                </div>
-
+              </div>
+              
                 {/* Cargo Details */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div>
+              <div>
                     <label className="block text-sm font-medium mb-2">Weight (kg)</label>
-                    <input 
-                      type="number" 
-                      name="weight" 
-                      placeholder="100" 
-                      min="1" 
-                      value={formData.weight}
-                      onChange={handleInputChange}
+                <input 
+                  type="number" 
+                  name="weight" 
+                  placeholder="100" 
+                  min="1" 
+                  value={formData.weight}
+                  onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
-                      required
-                    />
-                  </div>
-                  
-                  <div>
+                  required
+                />
+              </div>
+              
+              <div>
                     <label className="block text-sm font-medium mb-2">Volume (CBM)</label>
-                    <input 
-                      type="number" 
-                      name="volume" 
-                      placeholder="0.5" 
-                      step="0.1" 
-                      min="0.1" 
-                      value={formData.volume}
-                      onChange={handleInputChange}
+                <input 
+                  type="number" 
+                  name="volume" 
+                  placeholder="0.5" 
+                  step="0.1" 
+                  min="0.1" 
+                  value={formData.volume}
+                  onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
                       required
                     />
@@ -263,10 +263,10 @@ export default function Home() {
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
-                      required
-                    />
-                  </div>
-                  
+                  required
+                />
+              </div>
+              
                   <div>
                     <label className="block text-sm font-medium mb-2">Company Name</label>
                     <input 
@@ -281,16 +281,16 @@ export default function Home() {
                 </div>
                 
                 <div className="text-center">
-                  <button 
-                    type="submit" 
-                    disabled={loading}
+                <button 
+                  type="submit" 
+                  disabled={loading}
                     className="bg-blue-600 text-white py-4 px-8 rounded-lg hover:bg-blue-700 disabled:opacity-50 font-semibold text-lg"
-                  >
+                >
                     {loading ? 'Getting Quote...' : 'Get Instant Quote'}
-                  </button>
-                </div>
-              </form>
-            </div>
+                </button>
+              </div>
+            </form>
+          </div>
           </div>
         </section>
 
@@ -311,7 +311,7 @@ export default function Home() {
                     }))
                   }}
                 >
-                  <div className="text-center">
+                <div className="text-center">
                     <div className="text-2xl font-bold text-blue-600">{route.from} → {route.to}</div>
                     <div className="text-sm text-gray-600 mt-2">{route.route}</div>
                   </div>
@@ -353,17 +353,17 @@ export default function Home() {
                     <div className="text-center">
                       <div className="text-3xl font-bold text-blue-600">${quote.price}</div>
                       <div className="text-sm text-gray-600">Per KG</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold">{quote.transit_time}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold">{quote.transit_time}</div>
                       <div className="text-sm text-gray-600">Transit Time</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold">${quote.total_cost}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold">${quote.total_cost}</div>
                       <div className="text-sm text-gray-600">Total Cost</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-sm font-bold">{quote.carrier}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm font-bold">{quote.carrier}</div>
                       <div className="text-sm text-gray-600">Carrier</div>
                     </div>
                   </div>
